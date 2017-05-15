@@ -28,6 +28,21 @@ $bnt-color: #0a6e9a;
   box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
   border-radius: 6px;
 }
+
+.btn {
+  background-color: #0a6f9a;
+  color: #fff;
+  box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
+  border-radius: 6px;
+}
+
+.paragraph {
+  font-size: 24px;
+  line-height: 36px;
+  color: #263238;
+  font-weight: normal;
+}
+
 /*style*/
 
 body {
@@ -80,13 +95,6 @@ header {
   }
 }
 
-.btn {
-  background-color: #0a6f9a;
-  color: #fff;
-  box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
-  border-radius: 6px;
-}
-
 .authorization {
   float: right;
   margin-top: 58px;
@@ -96,9 +104,12 @@ header {
     display: inline-block;
     padding: 24px 45px;
     text-transform: uppercase;
+    transition-duration: 0.7s;
+    
     
     &:hover {
       @include btn;
+      transition-duration: 0.7s;
     }
   }
 }
@@ -110,6 +121,8 @@ header {
   @extend .btn;
   margin-bottom: 116px;
   margin-right: 6.38703527169%; /*67/1049*/
+  transition-duration: 0.7s;
+  animation-name: slide;
   &::before {
     position: absolute;
     content: "";
@@ -124,6 +137,10 @@ header {
   &:last-child::before {
       background-image: url(../img/android.svg);
     }
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.7s;
+  }
 }
 
 .services {
@@ -182,4 +199,88 @@ header {
 
 .advantages-block {
   background-color: #e4f1fe;
+  text-align: center;
+  padding-top: 86px;
+  
+  h2 {
+    @include title;
+    margin-bottom: 40px;
+  }
+  
+  
+  > p{
+    @extend .paragraph;
+    max-width: 1000px;
+    margin: 0 auto 54px auto;
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  
+  img {
+    margin-left: 6.923076923077%; /*90/1300*100*/
+    margin-right: 6.923076923077%;
+    margin-bottom: 90px;
+  }
+  
+  > div {
+    box-sizing: border-box;
+    max-width: 270px;
+    padding: 25px;
+  }
+}
+
+.left-block div:first-child,
+.right-block div:first-child {
+  margin-bottom: 156px;
+}
+
+.left-block div,
+.right-block div {
+  position: relative;
+  
+  
+  h3 {
+    font-size: 24px;
+    color: #263238;
+    font-weight: bold;
+  }
+  
+  
+  p {
+    @include text;
+    line-height: 27px;
+  }
+  
+  
+  &::before {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    top: -35px;
+    left: 45%;
+    background-repeat: no-repeat;
+  }
+}
+
+.adv1::before {
+  background-image: url("../img/lock1.png");
+}
+
+.adv2::before {
+  background-image: url("../img/upload_to_cloud.png");
+}
+
+.adv3::before {
+  background-image: url("../img/Layer%208.png");
+}
+
+.adv4::before {
+  background-image: url("../img/ratings.png");
 }

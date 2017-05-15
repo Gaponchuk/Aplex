@@ -8,6 +8,20 @@ $ff: Ubuntu, sans-serif;
 $fz: 18px;
 $bnt-color: #0a6e9a;
 */
+.btn, .button a {
+  background-color: #0a6f9a;
+  color: #fff;
+  box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
+  border-radius: 6px;
+}
+
+.paragraph, .advantages-block > p {
+  font-size: 24px;
+  line-height: 36px;
+  color: #263238;
+  font-weight: normal;
+}
+
 /*style*/
 body {
   font-family: Ubuntu, sans-serif;
@@ -56,13 +70,6 @@ header article p {
   margin-bottom: 61px;
 }
 
-.btn, .button a {
-  background-color: #0a6f9a;
-  color: #fff;
-  box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
-  border-radius: 6px;
-}
-
 .authorization {
   float: right;
   margin-top: 58px;
@@ -71,12 +78,14 @@ header article p {
   display: inline-block;
   padding: 24px 45px;
   text-transform: uppercase;
+  transition-duration: 0.7s;
 }
 .authorization a:hover {
   background-color: #0a6f9a;
   color: #fff;
   box-shadow: 0 14px 51px rgba(36, 70, 115, 0.5);
   border-radius: 6px;
+  transition-duration: 0.7s;
 }
 
 .button a {
@@ -86,6 +95,8 @@ header article p {
   margin-bottom: 116px;
   margin-right: 6.38703527169%;
   /*67/1049*/
+  transition-duration: 0.7s;
+  animation-name: slide;
 }
 .button a::before {
   position: absolute;
@@ -100,6 +111,10 @@ header article p {
 }
 .button a:last-child::before {
   background-image: url(../img/android.svg);
+}
+.button a:hover {
+  transform: scale(1.1);
+  transition-duration: 0.7s;
 }
 
 .services {
@@ -150,6 +165,86 @@ header article p {
 
 .advantages-block {
   background-color: #e4f1fe;
+  text-align: center;
+  padding-top: 86px;
+}
+.advantages-block h2 {
+  font-family: Raleway Black, sans-serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+.advantages-block > p {
+  max-width: 1000px;
+  margin: 0 auto 54px auto;
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.advantages img {
+  margin-left: 6.923076923077%;
+  /*90/1300*100*/
+  margin-right: 6.923076923077%;
+  margin-bottom: 90px;
+}
+.advantages > div {
+  box-sizing: border-box;
+  max-width: 270px;
+  padding: 25px;
+}
+
+.left-block div:first-child,
+.right-block div:first-child {
+  margin-bottom: 156px;
+}
+
+.left-block div,
+.right-block div {
+  position: relative;
+}
+.left-block div h3,
+.right-block div h3 {
+  font-size: 24px;
+  color: #263238;
+  font-weight: bold;
+}
+.left-block div p,
+.right-block div p {
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  color: #263238;
+  line-height: 27px;
+}
+.left-block div::before,
+.right-block div::before {
+  position: absolute;
+  content: "";
+  width: 29px;
+  height: 25px;
+  top: -35px;
+  left: 45%;
+  background-repeat: no-repeat;
+}
+
+.adv1::before {
+  background-image: url("../img/lock1.png");
+}
+
+.adv2::before {
+  background-image: url("../img/upload_to_cloud.png");
+}
+
+.adv3::before {
+  background-image: url("../img/Layer%208.png");
+}
+
+.adv4::before {
+  background-image: url("../img/ratings.png");
 }
 
 /*# sourceMappingURL=style.css.map */
