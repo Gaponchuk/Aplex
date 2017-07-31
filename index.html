@@ -4,6 +4,7 @@
     <title>Aplex</title>
     <meta charset="utf-8">
     <meta description="" content=""> <!--it's right?-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
   </head>
   <body>
@@ -64,7 +65,9 @@
                 </p>
               </div>
             </div>
-            <img src="img/phone.png" alt="" width="249" height="507">
+            <div class="phone-block">
+              <img src="img/phone.png" alt="">
+            </div>
             <div class="right-block">
               <div class="adv3">
                 <h3>Auto update</h3>
@@ -82,10 +85,14 @@
         </article>
         <section class="test">
         <div class="wrapper">
-         <img src="img/test-phone.jpg" alt="">
-          <h2>try it in your browser right now</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <div class="test-text">  
+            <h2>try it in your browser right now</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="test-phone">
+<!--            <img src="img/test-phone.jpg" alt="">-->
+          </div>
           </div>
         </section>
         <section class="video">
@@ -93,11 +100,9 @@
           <h2>A video worth thousand word</h2>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
           </p>
-          <video poster="" swidth="960" height="530" controls>
-            <source src="TL.mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Tour browser does not aupport the video tag.
-          </video>
+          <div class="video-section">
+            <iframe src="https://player.vimeo.com/video/226441556" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
           </div>
         </section>
         <section class="testimonials">
@@ -157,7 +162,7 @@
         </p>
         <form action="" method="">
           <label for="sub-email"></label>
-          <input id="sub-email" type="email">
+          <input id="sub-email" type="email" placeholder="Enter your email">
           <button type="submit">get in</button>
         </form>
       </div>
@@ -176,5 +181,9 @@
         </div>
       </div>
     </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    
   </body>
 </html>
